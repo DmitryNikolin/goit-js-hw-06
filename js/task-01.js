@@ -4,20 +4,20 @@ console.log(`Number of categories: ${categories.length}`);
 console.log(' ');
 
 for (const category of categories) {
-  const children = [...category.children];
+    const group = [...category.children];
 
-  for (const child of children) {
-    if (child.tagName === 'H2') {
-      console.log(`Category: ${child.textContent}`);
-      break;
+    for (const element of group) {
+        if (element.tagName === 'H2') {
+            console.log(`Category: ${element.textContent}`);
+            break;
+        }
     }
-  }
 
-  for (const child of children) {
-    if (child.tagName === 'UL') {
-      console.log(`Elements: ${child.children.length}`);
-      break;
+    for (const element of group) {
+        if (element.tagName === 'UL') {
+            console.log(`Elements: ${element.children.length}`);
+            break;
+        }
     }
-  }
-  console.log(' ');
+    console.log(' ');
 }
