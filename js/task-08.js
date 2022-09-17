@@ -14,10 +14,12 @@ const doneSubmit = event => {
     } else {
         if (password.value === '') {
             alert('Ошибка! Поле Password не заполнено!');
+        } else {
+            // console.log(`e-mail: ${email.value}, password: ${password.value}`);
+            const loginFields = { email: email.value, password: password.value };
+            console.log(loginFields);
         }
-    }
-
-    console.log(`e-mail: ${email.value}, password: ${password.value}`);
+    };
     event.currentTarget.reset();
 };
 
