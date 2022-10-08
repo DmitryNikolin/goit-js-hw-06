@@ -35,7 +35,7 @@ images.forEach(img => {
 
 // set display
 
-list.insertAdjacentHTML('afterbegin', markup);
+list.insertAdjacentHTML('beforeend', markup);
 list.style.display = 'flex';
 list.style.justifyContent = 'space-between';
 list.style.listStyle = 'none';
