@@ -7,19 +7,22 @@ const doneSubmit = event => {
     } = event.currentTarget;
     if (email.value === '') {
         if (password.value === '') {
-            alert('Ошибка! Поля Email и Password не заполнены!');
+            alert('Error! Fields Email and Password not filled!');
         } else {
-            alert('Ошибка! Поле Email не заполнено!');
+            alert('Error! Field Email not filled!');
         }
     } else {
         if (password.value === '') {
-            alert('Ошибка! Поле Password не заполнено!');
+            alert('Error! Field Password not filled!');
         } else {
             // console.log(`e-mail: ${email.value}, password: ${password.value}`);
-            const loginFields = { email: email.value, password: password.value };
+            const loginFields = {
+                email: email.value,
+                password: password.value,
+            };
             console.log(loginFields);
         }
-    };
+    }
     event.currentTarget.reset();
 };
 

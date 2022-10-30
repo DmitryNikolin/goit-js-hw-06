@@ -3,7 +3,7 @@ const span = document.querySelector('#text');
 let fontSize = String(Math.round(range.value)) + 'px';
 span.style.fontSize = fontSize;
 
-range.addEventListener('input', even => {
-    fontSize = String(Math.round(even.currentTarget.value)) + 'px';
+range.addEventListener('input', event => {
+    fontSize = String(Math.round(event.currentTarget.value)) + 'px';
     span.style.fontSize = fontSize;
 });
